@@ -1,0 +1,118 @@
+.projetos {
+  padding: 70px 0;
+}
+
+.projetos .titulo {
+  text-align: center;
+  padding: 60px 0;
+  font-size: 45px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.projetos .containerProjetos {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  justify-content: center;
+}
+
+.projetos .projeto {
+  width: 100%;
+  max-width: 250px;
+  max-height: 500px;
+  position: relative;
+  display: none;
+  overflow: hidden;
+}
+
+.projetos .projeto.ativo {
+  display: block;
+}
+
+.projetos .projeto img {
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+}
+
+.projetos .projeto h3 {
+  background-color: var(--pretoT);
+  width: 100%;
+  padding: 10px 0 10px 20px;
+  position: absolute;
+  bottom: 0;
+  color: var(--branco);
+}
+
+.projetos .projeto .informacoesProjeto {
+  background-color: var(--cinza);
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  padding: 30px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.projetos .projeto .informacoesProjeto span {
+  font-size: 14px;
+}
+
+.projetos .containerProjetos .projeto:hover .informacoesProjeto {
+  opacity: 0.9;
+  background-color: var(--pretoT);
+}
+
+.projetos .btnMostrarProjetos {
+  background: none;
+  border: 1px solid var(--cinza);
+  border-radius: 15px;
+  color: var(--pretoT);
+  width: 180px;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.projetos .btnMostrarProjetos:hover {
+  background-color: var(--verde);
+}
+
+.projetos .btnMostrarProjetos.remover {
+  opacity: 0;
+  display: none;
+  transition: opacity 0.3s;
+}
+
+@media (max-width: 1280px) {
+  .projetos .titulo {
+    font-size: 30px;
+    padding: 40px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .projetos .titulo {
+    font-size: 25px;
+    padding: 30px 0;
+  }
+}
+
+@media (max-width: 425px) {
+  .projetos .titulo {
+    font-size: 20px;
+    padding: 20px 0;
+  }
+}
