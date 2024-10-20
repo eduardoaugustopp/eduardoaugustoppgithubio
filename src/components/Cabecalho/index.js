@@ -39,7 +39,7 @@ function Cabecalho() {
               <li>
                 <button id="Curriculum">
                   <a
-                    href="https://drive.google.com/file/d/1AS-whFUCsQ-Sfbo3nPsqAs2iarN3BVaP/view?usp=sharing"
+                    href="https://drive.google.com/file/d/1puxDSqJliCZAKuwoLKB_s9kCvYfB4shf/view?usp=sharing"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
