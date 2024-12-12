@@ -70,13 +70,7 @@ function MainContent() {
             <div className={style.paragraph}>
               <h2>Aqui está um resumo dos meus estudos e projetos!</h2>
               <p>
-                Sou um Desenvolvedor de Software em formação, tenho como
-                objetivo me especializar cada vez mais nesta área. Estou
-                cursando Engenharia de Software na Estácio e desenvolvi
-                conhecimentos em HTML, CSS, JavaScript, Java, Python, PHP, SQL,
-                NoSQL e Git. Para complementar a teoria aprendida na faculdade,
-                tenho realizado cursos na Alura, onde pratico e aplico esses
-                conhecimentos em projetos reais.
+                
               </p>
               <br />
               <p>
