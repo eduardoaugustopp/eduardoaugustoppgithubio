@@ -6,7 +6,7 @@ function MainContent() {
   useEffect(() => {
     const matrixContainer = document.getElementById("matrix");
     const characters =
-      "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+      "01";
 
     const createMatrix = () => {
       matrixContainer.innerHTML = "";
@@ -70,12 +70,11 @@ function MainContent() {
             <div className={style.paragraph}>
               <h2>Aqui está um resumo dos meus estudos e projetos!</h2>
               <p>
-                
-              </p>
-              <br />
-              <p>
-                Estou sempre em busca de oportunidades para aprender e crescer
-                profissionalmente.
+                Desenvolvedor de Software em constante busca por novos desafios
+                que me impulsionam a aprender e a desenvolver continuamente, com
+                experiência em projetos pessoais usando HTML, CSS, JavaScript,
+                Node.js, Express.js e React, além de conhecimentos em bancos de
+                dados como MongoDB, PostgreSQL e PHP.
               </p>
               <br />
               <p>
