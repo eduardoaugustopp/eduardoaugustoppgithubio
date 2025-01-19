@@ -86,18 +86,17 @@ const skillsData = {
   backend: [
     { src: "https://skillicons.dev/icons?i=nodejs", alt: "Node.js" },
     { src: "https://skillicons.dev/icons?i=java", alt: "Java" },
+    { src: "https://skillicons.dev/icons?i=spring", alt: "Spring" },
+    { src: "https://skillicons.dev/icons?i=mysql", alt: "MySQL" },
+    { src: "https://skillicons.dev/icons?i=mongodb", alt: "MongoDB" },
+    { src: "https://skillicons.dev/icons?i=aws", alt: "AWS" },
+    { src: "https://skillicons.dev/icons?i=docker", alt: "Docker" },
   ],
   tools: [
     { src: "https://skillicons.dev/icons?i=vscode", alt: "VSCode" },
     { src: "https://skillicons.dev/icons?i=git", alt: "Git" },
-    { src: "https://skillicons.dev/icons?i=aws", alt: "AWS" },
-    { src: "https://skillicons.dev/icons?i=docker", alt: "Docker" },
-    { src: "https://skillicons.dev/icons?i=linux", alt: "Linux" },
     { src: "https://skillicons.dev/icons?i=postman", alt: "Postman" },
-    { src: "https://skillicons.dev/icons?i=mysql", alt: "MySQL" },
-    { src: "https://skillicons.dev/icons?i=mongodb", alt: "MongoDB" },
     { src: "https://skillicons.dev/icons?i=eclipse", alt: "Eclipse" },
-    { src: "https://skillicons.dev/icons?i=spring", alt: "Spring" },
   ],
 };
 
@@ -123,7 +122,7 @@ function SkillSection({ title, skills }) {
 function Skills() {
   return (
     <SkillsContainer>
-      <Title>Linguagens e Ferramentas</Title>
+      <Title>Habilidades</Title>
       <Table>
         <thead>
           <tr>

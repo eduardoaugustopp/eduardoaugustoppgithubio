@@ -204,7 +204,7 @@ function Projects() {
 
   return (
     <Section id="projetos">
-      <Title>Meus repositórios de projetos pessoais</Title>
+      <Title>Projetos</Title>
 
       <ContainerProjetos>
         {projetos.map((projeto, index) => {

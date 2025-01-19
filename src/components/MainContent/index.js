@@ -12,7 +12,7 @@ const HomeSection = styled.section`
 
 const Heading = styled.h1`
   margin: 20px 0;
-  padding-top: 300px; 
+  padding-top: 300px;
   color: var(--branco);
   font-weight: 300;
   font-size: 3.5rem;
@@ -23,32 +23,32 @@ const Heading = styled.h1`
   }
 
   @media (max-width: 1024px) {
-    padding-top: 100px; 
+    padding-top: 100px;
     font-size: 3rem;
   }
 
   @media (max-width: 768px) {
     font-size: 2.5rem;
-    padding-top: 80px; 
+    padding-top: 80px;
   }
 
   @media (max-width: 480px) {
     font-size: 1.5rem;
-    padding-top: 300px; 
+    padding-top: 300px;
   }
 `;
 
 const ImgTextWrapper = styled.div`
   display: flex;
-  justify-content: center; 
-  align-items: center; 
+  justify-content: center;
+  align-items: center;
   gap: 20px;
   flex-wrap: wrap;
   text-align: center;
-  min-height: 100vh; 
+  min-height: 100vh;
 
   @media (max-width: 768px) {
-    flex-direction: column; 
+    flex-direction: column;
     gap: 20px;
   }
 `;
@@ -68,7 +68,7 @@ const Paragraph = styled.div`
   }
 
   @media (max-width: 768px) {
-    padding: 0 10px; 
+    padding: 0 10px;
   }
 `;
 
@@ -96,16 +96,16 @@ const ProfileImageContainer = styled.div`
   justify-content: center;
   align-items: center;
   height: calc(100vh - 60px);
-  margin-top: 20px; 
+  margin-top: 20px;
   position: relative;
 
   @media (max-width: 768px) {
-    height: auto; 
+    height: auto;
     margin-top: 40px;
   }
 
   @media (max-width: 480px) {
-    margin-top: 30px; 
+    margin-top: 30px;
   }
 `;
 
@@ -133,12 +133,12 @@ const ProfileImage = styled.img`
   }
 
   @media (max-width: 768px) {
-    width: 200px; /* Reduz a imagem no tablet */
+    width: 200px;
     height: 200px;
   }
 
   @media (max-width: 480px) {
-    width: 150px; /* Reduz a imagem no celular */
+    width: 150px;
     height: 150px;
   }
 `;
@@ -159,11 +159,11 @@ function MainContent() {
 
       <ImgTextWrapper>
         <Paragraph>
-          <h2>Aqui você encontrará meus estudos!</h2>
+          <h2>Aqui você encontrará meus estudos</h2>
           <p>
             Como profissional estou sempre aprimorando minhas habilidades em
             tecnologia, busco aprofundar minha capacidade de construir soluções
-            que agreguem valor ao negócio.
+            que agreguem valor ao negócio. Atualmente meu foco é em Java.
           </p>
           <p>
             Também gosto de correr, é uma das minhas atividades favoritas! 🏃‍♂️🚀

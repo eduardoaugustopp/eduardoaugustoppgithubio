@@ -14,11 +14,10 @@
 
 ## 💻 Projeto
 
-Este é meu portfólio, onde você pode conhecer um pouco mais sobre mim e os projetos que desenvolvi.
+Este é meu portfólio
+[acesse clicando aqui](https://eduardoaugustopp-portfolio.vercel.app/).
 
-- [Acesse clicando aqui](https://eduardoaugustoppgithubio.vercel.app/)
-
-## �� Tecnologias
+## Tecnologias
 
 <div>
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original-wordmark.svg" width="40" height="40"/>

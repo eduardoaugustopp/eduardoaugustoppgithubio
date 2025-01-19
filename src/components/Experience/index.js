@@ -120,13 +120,13 @@ const cards = [
   {
     imagemLink:
       "https://attachments.gupy.io/production/companies/49966/career/107491/images/2022-10-25_17-02_logo.jpg",
-    empresa: "Fundação Instituto Nacional de Telecomunicações",
+    empresa: "Instituto Nacional de Telecomunicações",
     localizacao: "Santa Rita do Sapucaí, MG",
     inicioMes: "Abril",
     inicioAno: "2021",
     terminoMes: "Janeiro",
     terminoAno: "2022",
-    cargo: "Técnico de Sistemas",
+    cargo: "Técnico de sistemas",
     atuacao:
       "Comissionamento e integração remota de sites da Claro | Oi (2g | 3g | 4g | 5g), utilizando ferramentas de gerenciamento nos equipamentos Nokia.",
     link: "https://inatel.br/home/",
@@ -134,13 +134,13 @@ const cards = [
   {
     imagemLink:
       "https://ativasolucoes.com.br/wp-content/uploads/2022/10/Logo-ATIVA-Solucoes.png",
-    empresa: "Ativa Soluções Tecnológicas",
+    empresa: "ATIVA Soluções Tecnológicas",
     localizacao: "Santa Rita do Sapucaí, MG",
     inicioMes: "Janeiro",
     inicioAno: "2018",
     terminoMes: "Dezembro",
     terminoAno: "2018",
-    cargo: "Técnico de Eletrônica",
+    cargo: "Técnico em Eletrônica",
     atuacao:
       "Manutenção das estações pluviométricas do Cemaden em cidades do semiárido.",
     link: "https://ativasolucoes.com.br/",
@@ -154,14 +154,14 @@ const cards = [
     inicioAno: "2017",
     terminoMes: "Dezembro",
     terminoAno: "2017",
-    cargo: "Técnico de Implantação",
+    cargo: "Técnico de implantação",
     atuacao:
       "Comissionamento, integração e atividades em altura de sites da Claro (2g | 3g | 4g).",
     link: "https://www.ericsson.com/pt/about-us/company-facts/ericsson-worldwide/brazil",
   },
   {
     imagemLink: "https://www.qualitronix.com.br/images/qualitronix-logo.png",
-    empresa: "Qualitronix",
+    empresa: "Qualitronix Tecnologia Ltda",
     localizacao: "Santa Rita do Sapucaí, MG",
     inicioMes: "Março",
     inicioAno: "2015",
@@ -213,7 +213,7 @@ const Experience = () => {
 
   return (
     <div>
-      <Title>Experiência Profissional</Title>
+      <Title>Experiência</Title>
       <Container>{cards.map(criarCard)}</Container>
     </div>
   );
