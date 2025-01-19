@@ -1,142 +1,222 @@
-import { useEffect } from "react";
-import style from "./MainContent.module.css";
+import styled from "styled-components";
 import perfil from "./perfil.png";
 
-function MainContent() {
-  useEffect(() => {
-    const matrixContainer = document.getElementById("matrix");
-    const characters =
-      "01";
+const MainContainer = styled.div`
+  padding: 20px;
+`;
 
-    const createMatrix = () => {
-      matrixContainer.innerHTML = "";
+const HomeSection = styled.section`
+  text-align: center;
+  margin-bottom: 300px;
+`;
 
-      const numberOfColumns = Math.floor(window.innerWidth / 25);
+const Heading = styled.h1`
+  margin: 20px 0;
+  padding-top: 300px; 
+  color: var(--branco);
+  font-weight: 300;
+  font-size: 3.5rem;
 
-      for (let i = 0; i < numberOfColumns; i++) {
-        const column = document.createElement("div");
-        column.style.position = "absolute";
-        column.style.left = `${i * 25}px`;
-        column.style.top = "0";
+  span {
+    color: #3498db;
+    font-weight: bold;
+  }
 
-        const charCount = Math.floor(Math.random() * 10) + 5;
-        for (let j = 0; j < charCount; j++) {
-          const char = document.createElement("span");
-          char.className = style.char;
-          char.innerText = characters.charAt(
-            Math.floor(Math.random() * characters.length)
-          );
-          char.style.animationDuration = `${Math.random() * 3 + 2}s`;
+  @media (max-width: 1024px) {
+    padding-top: 100px; 
+    font-size: 3rem;
+  }
 
-          column.appendChild(char);
+  @media (max-width: 768px) {
+    font-size: 2.5rem;
+    padding-top: 80px; 
+  }
 
-          setTimeout(() => {
-            char.style.opacity = "1";
-          }, j * 200);
-        }
+  @media (max-width: 480px) {
+    font-size: 1.5rem;
+    padding-top: 300px; 
+  }
+`;
 
-        matrixContainer.appendChild(column);
+const ImgTextWrapper = styled.div`
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  gap: 20px;
+  flex-wrap: wrap;
+  text-align: center;
+  min-height: 100vh; 
+
+  @media (max-width: 768px) {
+    flex-direction: column; 
+    gap: 20px;
+  }
+`;
+
+const Paragraph = styled.div`
+  flex: 1;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 50px;
+  }
+
+  p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: left;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 10px; 
+  }
+`;
+
+const SocialLinks = styled.ul`
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+
+  li {
+    a {
+      font-size: 1.5rem;
+      color: #2c3e50;
+      text-decoration: none;
+
+      &:hover {
+        color: #3498db;
       }
-    };
+    }
+  }
+`;
 
-    createMatrix();
+const ProfileImageContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 60px);
+  margin-top: 20px; 
+  position: relative;
 
-    window.addEventListener("resize", createMatrix);
+  @media (max-width: 768px) {
+    height: auto; 
+    margin-top: 40px;
+  }
 
-    return () => {
-      window.removeEventListener("resize", createMatrix);
-    };
-  }, []);
+  @media (max-width: 480px) {
+    margin-top: 30px; 
+  }
+`;
 
+const ProfileImage = styled.img`
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: linear-gradient(111.1deg, #2f2f2f 0%, #a9a9a9 100%);
+  background-size: 180% 180%;
+  animation: gradient-animation 5s ease infinite;
+
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: 200px; /* Reduz a imagem no tablet */
+    height: 200px;
+  }
+
+  @media (max-width: 480px) {
+    width: 150px; /* Reduz a imagem no celular */
+    height: 150px;
+  }
+`;
+
+function MainContent() {
   return (
-    <main>
-      <div id="matrix"></div>
-      <div className={style.mainContent}>
-        <div className={style.home}>
-          <h1>
-            Desenvolvimento <span style={{ color: "#006400" }}>FrontEnd</span> e{" "}
-            <span style={{ color: "#006400" }}>BackEnd</span> para criar sites e
-            sistemas simples.
-            <br />
-            Olá! Me chamo{" "}
-            <span style={{ color: "#006400" }}>Eduardo Augusto</span>.
-            <span className={style.wave} role="img" aria-labelledby="wave">
-              👋🏻
-            </span>
-          </h1>
-        </div>
-        <div className={style.content}>
-          <div className={style.imgText}>
-            <div className={style.paragraph}>
-              <h2>Aqui está um resumo dos meus estudos e projetos!</h2>
-              <p>
-                Desenvolvedor de Software em constante busca por novos desafios
-                que me impulsionam a aprender e a desenvolver continuamente, com
-                experiência em projetos pessoais usando HTML, CSS, JavaScript,
-                Node.js, Express.js e React, além de conhecimentos em bancos de
-                dados como MongoDB, PostgreSQL e PHP.
-              </p>
-              <br />
-              <p>
-                Também gosto de correr, é uma das minhas atividades favoritas!
-                🏃‍♂️🚀
-              </p>
-              <ul className={style.redesSociais}>
-                <li>
-                  <a
-                    href="https://www.linkedin.com/in/eduardoaugustopp"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title="Ir para o Linkedin"
-                  >
-                    <i className="bi bi-linkedin"></i>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://wa.me/5535998068977"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title="Enviar mensagem no WhatsApp"
-                  >
-                    <i className="bi bi-whatsapp"></i>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://github.com/eduardoaugustopp"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title="Ir para o Github"
-                  >
-                    <i className="bi bi-github"></i>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/Eduardo Augusto Paiva Pinto - Currículo.pdf"
-                    download="Eduardo Augusto Paiva Pinto - Currículo.pdf"
-                    title="Download do currículo"
-                    rel="noopener noreferrer"
-                  >
-                    <i className="bi bi-file-earmark-arrow-down"></i>
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div className={style.containerFoto}>
-              <div className={style.foto + " " + style.sombraInterna}>
-                <img
-                  src={perfil}
-                  alt="Carrinho"
-                  className={style.sombraInterna}
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
+    <MainContainer>
+      <HomeSection>
+        <Heading>
+          Desenvolvimento <span>FrontEnd</span> e <span>BackEnd</span>.
+          <br />
+          Olá! Me chamo <span>Eduardo Augusto</span>.
+          <span role="img" aria-labelledby="wave" style={{ fontSize: "2rem" }}>
+            👋🏻
+          </span>
+        </Heading>
+      </HomeSection>
+
+      <ImgTextWrapper>
+        <Paragraph>
+          <h2>Aqui você encontrará meus estudos!</h2>
+          <p>
+            Como profissional estou sempre aprimorando minhas habilidades em
+            tecnologia, busco aprofundar minha capacidade de construir soluções
+            que agreguem valor ao negócio.
+          </p>
+          <p>
+            Também gosto de correr, é uma das minhas atividades favoritas! 🏃‍♂️🚀
+          </p>
+          <SocialLinks>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/eduardoaugustopp"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Ir para o Linkedin"
+              >
+                <i className="bi bi-linkedin"></i>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://wa.me/5535998068977"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Enviar mensagem no WhatsApp"
+              >
+                <i className="bi bi-whatsapp"></i>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/eduardoaugustopp"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Ir para o Github"
+              >
+                <i className="bi bi-github"></i>
+              </a>
+            </li>
+            <li>
+              <a
+                href="/Eduardo Augusto Paiva Pinto - Currículo.pdf"
+                download="Eduardo Augusto Paiva Pinto - Currículo.pdf"
+                title="Download do currículo"
+                rel="noopener noreferrer"
+              >
+                <i className="bi bi-file-earmark-arrow-down"></i>
+              </a>
+            </li>
+          </SocialLinks>
+        </Paragraph>
+
+        <ProfileImageContainer>
+          <ProfileImage src={perfil} alt="Perfil" />
+        </ProfileImageContainer>
+      </ImgTextWrapper>
+    </MainContainer>
   );
 }
 

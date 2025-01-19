@@ -1,11 +1,11 @@
-import Inicio from "pages/Inicio";
+import Home from "pages/Home";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function AppRoutes() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<Inicio />}></Route>
+                <Route path="/" element={<Home />}></Route>
             </Routes>
         </BrowserRouter>
     )

@@ -1,19 +1,21 @@
-import Cabecalho from "components/Cabecalho";
+import Header from "components/Header";
 import Footer from "components/Footer";
 import MainContent from "components/MainContent";
 import Projects from "components/Projects";
-import Experiencia from "components/Experiencia";
+import Experience from "components/Experience";
+import Skills from "components/Skills";
 
-function Inicio() {
+function Home() {
   return (
     <div>
-      <Cabecalho />
+      <Header />
       <MainContent />
+      <Skills />
       <Projects />
-      <Experiencia />
+      <Experience />
       <Footer />
     </div>
   );
 }
 
-export default Inicio;
+export default Home;
