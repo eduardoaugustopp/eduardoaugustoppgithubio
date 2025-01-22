@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 
 const FooterWrapper = styled.footer`
@@ -19,6 +20,10 @@ const FooterWrapper = styled.footer`
     flex-direction: column;
     font-size: 0.8rem;
     padding: 20px 0;
+  }
+  @media (max-width: 540px) and (max-height: 720px) {
+    font-size: 0.5rem;
+    padding: 5px 0;
   }
 `;
 

@@ -23,13 +23,13 @@ const Heading = styled.h1`
   }
 
   @media (max-width: 1024px) {
-    padding-top: 100px;
+    padding-top: 450px;
     font-size: 3rem;
   }
 
   @media (max-width: 768px) {
     font-size: 2.5rem;
-    padding-top: 80px;
+    padding-top: 350px;
   }
 
   @media (max-width: 480px) {
@@ -42,14 +42,14 @@ const ImgTextWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
   flex-wrap: wrap;
   text-align: center;
   min-height: 100vh;
 
   @media (max-width: 768px) {
     flex-direction: column;
-    gap: 20px;
+    gap: 5px;
   }
 `;
 
@@ -102,6 +102,7 @@ const ProfileImageContainer = styled.div`
   @media (max-width: 768px) {
     height: auto;
     margin-top: 40px;
+    
   }
 
   @media (max-width: 480px) {
